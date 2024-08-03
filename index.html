@@ -15,19 +15,19 @@
   </head>
   <body>
     <h1>24 CSS Projects</h1>
-    <ol id="project-list">
-      <script>
-        let projectData = "";
+    <ol id="project-list"></ol>
+    <script>
+      let projectDataElement = "";
 
-        if (projectsData && projectsData.length > 0) {
-          projectsData.forEach((project) => {
-            let { title: projectTitle, link: projectLink } = project;
+      if (projectsData && projectsData.length > 0) {
+        projectsData.forEach((project) => {
+          let { title: projectTitle, link: projectLink } = project;
 
-            projectData = `<li><a href="https://jimi-chhatrala.github.io/24-css-projects/${projectLink}" target="_blank">${projectTitle}</a></li>`;
-          });
-        }
-        document.getElementById("project-list").innerHTML = projectData;
-      </script>
-    </ol>
+          projectDataElement += `<li><a href="https://jimi-chhatrala.github.io/24-css-projects/${projectLink}" target="_blank">${projectTitle}</a></li>`;
+        });
+      }
+
+      document.getElementById("project-list").innerHTML = projectDataElement;
+    </script>
   </body>
 </html>
