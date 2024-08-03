@@ -17,6 +17,12 @@ h1 {
   margin: 1em;
 }
 
+h1 span {
+  font-size: 1em;
+  margin-right: 0.2em;
+  color: #87ceeb;
+}
+
 ol {
   color: #f0f0f0;
   margin: 1em;
