@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24 CSS Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./data.js"></script>
+  </head>
+  <body>
+    <h1>24 CSS Projects</h1>
+    <ol id="project-list">
+      <script>
+        let projectData = "";
+
+        if (projectsData && projectsData.length > 0) {
+          projectsData.forEach((project) => {
+            let { title: projectTitle, link: projectLink } = project;
+
+            projectData = `<li><a href="https://jimi-chhatrala.github.io/24-css-projects/${projectLink}" target="_blank">${projectTitle}</a></li>`;
+          });
+        }
+        document.getElementById("project-list").innerHTML = projectData;
+      </script>
+    </ol>
+  </body>
+</html>
